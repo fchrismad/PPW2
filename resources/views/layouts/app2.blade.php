@@ -12,6 +12,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('lightbox2-dev/dist/css/lightbox.min.css') }}">
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
@@ -40,6 +41,11 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/posts">Post</a>
                         </li>
+                        <li class="nav-item d-none d-sm-inline-block">
+                            <a class="nav-link" href="{{ url('/gallery') }}">
+                                Gallery
+                             </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -49,5 +55,6 @@
             @yield('content')
         </div>
 
+        <script src="{{ asset('lightbox2-dev/dist/js/lightbox-plus-jquery.min.js') }}"></script>
     </body>
 </html>

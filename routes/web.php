@@ -18,7 +18,8 @@ use App\Http\Controllers\SendEmailController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    // return view('welcome');
+    echo asset('storage/file.txt');
 });
 
 Route::get('/home2', function () {
@@ -78,3 +79,5 @@ Route::get('/projects', [App\Http\Controllers\ProjectsController::class, 'index'
 
 Route::get('/send-email', [SendEmailController::class, 'index'])->name('kirim-email');
 Route::post('/post-email', [SendEmailController::class, 'store'])->name('post-email');
+
+Route::resource('gallery', 'App\Http\Controllers\GalleryController');
