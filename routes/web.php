@@ -5,6 +5,8 @@ use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\SendEmail;
 use App\Http\Controllers\SendEmailController;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\GreetController;
 
 /*
 |--------------------------------------------------------------------------
@@ -81,3 +83,6 @@ Route::get('/send-email', [SendEmailController::class, 'index'])->name('kirim-em
 Route::post('/post-email', [SendEmailController::class, 'store'])->name('post-email');
 
 Route::resource('gallery', 'App\Http\Controllers\GalleryController');
+Route::get('/gallery2', [GreetController::class, 'gallery'])->name('gallery');
+
+Route::get('/greet', [GreetController::class, 'greet'])->name('greeting');

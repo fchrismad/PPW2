@@ -56,5 +56,6 @@
         </div>
 
         <script src="{{ asset('lightbox2-dev/dist/js/lightbox-plus-jquery.min.js') }}"></script>
+        <script src="{{ asset('gallery.js')}} "></script>
     </body>
 </html>
